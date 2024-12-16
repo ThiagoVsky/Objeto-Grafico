@@ -64,7 +64,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\Downloads\ObjGrafico.pdf">
+    <None Include="ObjGrafico_UML.pdf">
       <Filter>Arquivos de Recurso</Filter>
     </None>
   </ItemGroup>
