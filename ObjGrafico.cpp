@@ -1,0 +1,2 @@
+#include "ObjGrafico.h"
+
