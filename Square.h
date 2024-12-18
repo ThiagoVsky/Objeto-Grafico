@@ -9,5 +9,7 @@ public:
     Square(int x, int y, int base, COR cor);
 
     void resize(int base);
+    int getBase();
+    string toString();
 };
 

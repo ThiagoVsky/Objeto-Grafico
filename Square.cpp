@@ -10,5 +10,21 @@ void Square::resize(int base) {
 	this->base = base;
 	Rectangle::resize(getX1() + base, getY1() + base);
 }
+int Square::getBase() { return this->base; }
 
+string Square::toString() {
+	cout << "ObjGrafico: toString" << endl;
+	stringstream ss;
+	ss
+		<< "Type: "
+		<< getType()
+		<< "Color: "
+		<< getColor()
+		<< "X: "
+		<< getX1()
+		<< "Y: "
+		<< getY1()
+		<< "Base: "
+		<< getBase();
+}
 //toString
