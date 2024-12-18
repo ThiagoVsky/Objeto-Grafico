@@ -12,9 +12,10 @@ class Paint
 	// vou tratar sequencial como ID nos outros métodos
 	// já que se trata de um int - provavelmente identifica quem é quem
 
+public:
 	Paint();
 
-	void addObjGrafico(TYPE tipo, int x1, int y1, int x2, int y2);
+	void addObjGrafico(int type, int x1, int y1, int x2, int y2, COR cor = BRANCO);
 	void remove(int id); 
 	void remove();
 	void move(int id, int dx, int dy);

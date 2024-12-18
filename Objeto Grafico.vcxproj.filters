@@ -67,5 +67,8 @@
     <None Include="ObjGrafico_UML.pdf">
       <Filter>Arquivos de Recurso</Filter>
     </None>
+    <None Include="README.md">
+      <Filter>Arquivos de Recurso</Filter>
+    </None>
   </ItemGroup>
 </Project>
