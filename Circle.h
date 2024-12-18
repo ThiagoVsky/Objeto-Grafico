@@ -1,10 +1,11 @@
 #pragma once
-#include "ObjGrafico.h"
+#include "Oval.h"
 
 class Circle :
-    public ObjGrafico
+    public Oval
 {
-    Circle();
+public:
+    Circle(int posX, int posY, int radius, COR cor);
     
     void resize(int radius);
 };

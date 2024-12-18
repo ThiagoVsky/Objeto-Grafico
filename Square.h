@@ -1,11 +1,13 @@
 #pragma once
-#include "ObjGrafico.h"
+#include "Rectangle.h"
 
 class Square :
-    public ObjGrafico
+    public Rectangle
 {
-    Square();
+    int base;
+public:
+    Square(int x, int y, int base, COR cor);
 
-    void resize(int size);
+    void resize(int base);
 };
 
