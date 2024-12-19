@@ -28,6 +28,7 @@ void Paint::resize(int id, int x2, int y2){
 }
 void Paint::draw(){
 	cout << "Paint: draw" << endl;
+    // chamar toString dos objetos criados
 }
 void Paint::read(string label) {
 	cout << "Paint: read" << endl;

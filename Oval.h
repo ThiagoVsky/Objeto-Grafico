@@ -12,5 +12,7 @@ public:
     Oval(int sRadius, int bRadius, int posX, int posY, COR cor);
 
     void resize(int sRadius, int bRadius);
+
+    string toString();
 };
 

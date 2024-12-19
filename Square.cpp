@@ -20,9 +20,9 @@ string Square::toString() {
 		<< getType()
 		<< "Color: "
 		<< getColor()
-		<< "X: "
+		<< "Position (X, Y): "
 		<< getX1()
-		<< "Y: "
+		<< ", "
 		<< getY1()
 		<< "Base: "
 		<< getBase();

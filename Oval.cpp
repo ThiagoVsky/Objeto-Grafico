@@ -4,7 +4,13 @@ Oval::Oval(int sRadius, int bRadius, int posX, int posY, COR cor) : ObjGrafico(O
 	cout << "Oval: constructor" << endl;
 }
 
-string ObjGrafico::toString() {
+void Oval::resize(int sRadius, int bRadius) {
+	this->sRadius = sRadius;
+	this->bRadius = bRadius;
+}
+
+
+string Oval::toString() {
 	cout << "ObjGrafico: toString" << endl;
 	stringstream ss;
 	ss
@@ -12,13 +18,13 @@ string ObjGrafico::toString() {
 		<< getType()
 		<< "Color: "
 		<< getColor()
-		<< "X1: "
+		<< "Position (X, Y): "
 		<< getX1()
-		<< "Y1: "
+		<< ", "
 		<< getY1()
-		<< "X2: "
-		<< getX2()
-		<< "Y2: "
-		<< getY2();
+		<< "Bigger radius: "
+		<< bRadius
+		<< "Smaller radius: "
+		<< sRadius;
 }
 //toString
