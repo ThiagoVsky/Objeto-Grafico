@@ -27,4 +27,3 @@ string Oval::toString() {
 		<< "Smaller radius: "
 		<< sRadius;
 }
-//toString

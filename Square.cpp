@@ -27,4 +27,3 @@ string Square::toString() {
 		<< "Base: "
 		<< getBase();
 }
-//toString

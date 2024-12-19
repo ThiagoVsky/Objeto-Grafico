@@ -84,5 +84,4 @@ string ObjGrafico::toString(){
 		<< getX2()
 		<< "Y2: "
 		<< getY2();
-}	// works fine for LINE and RECTANGLE. SQUARE REQUIRES ADDITIONAL CODE.
-	// Other objects needs its own code.
+}
