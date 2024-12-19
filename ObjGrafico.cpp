@@ -30,17 +30,17 @@ string ObjGrafico::getType() {
 }string ObjGrafico::getColor() {
 	switch (cor) {
 	case 0:
-		return "LINE";
+		return "Preto";
 	case 1:
-		return "SQUARE";
+		return "Branco";
 	case 2:
-		return "RECTANGLE";
+		return "Vermelho";
 	case 3:
-		return "CIRCLE";
+		return "Azul";
 	case 4:
-		return "OVAL";
+		return "Verde";
 	default:
-		return "ERROR GETTING GRAPHIC OBJECT TYPE";
+		return "ERROR GETTING COLLOR";
 	}
 }
 
