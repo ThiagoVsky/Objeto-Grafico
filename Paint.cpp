@@ -1,19 +1,57 @@
 #include "Paint.h"
 
+
 Paint::Paint() {
 	cout << "Paint: Constructor" << endl;
 }
 
-void Paint::addObjGrafico(int type, int x1, int y1, int x2, int y2, COR cor = BRANCO){
+void Paint::addObjGrafico(TYPE type, int x1, int y1, int x2, int y2, COR cor){
 	cout << "Paint: addObjGrafico" << endl;
-	//garantir que x1 sempre menor que x2
-	//garantir que y1 sempre menor que y2
 
-	//switch case baseado no type
-
-	//QUADRADO e RETANGULO tem o mesmo switch
-	// se (x1 - x2 == y1 - y2)
+    if (x1 < 0 || x2 < 0 || y1 < 0 || y2 < 0) {
+        cerr << "As cordenadas devem ter valores de 0 para cima." << endl;
+        return;
+    }
+    if (!(x1 < x2) || !(y1 < y2)) {
+        cerr << "Os números da posição X2 e Y2 devem ser maiores que seus pares da posição 1." << endl;
+        return;
+    }
+    if ((x2 - x1) == (y2 - y1)) addSquare(x1, y1, x2 - x1, cor);
+    else {
+        if (type == RECTANGLE) objGraficos.push_back(new Rectangle(x1, y1, x2, y2, cor));
+        else if (type == LINE) objGraficos.push_back(new Line(x1, y1, x2, y2, cor));
+        else cerr << "Tipo especificado incorreto. Utilize as respectivas funções para criar outros métodos.";
+    }
 }
+
+void Paint::addSquare(int posx, int posy, int base, COR cor) {
+    cout << "Paint: addSquare" << endl;
+
+    if (posx < 0 || posy < 0 || base <= 0) {
+        cerr << "As cordenadas devem ter valores de 0 para cima. A base deve ter número acima de 0 a menos que queira criar uma linha" << endl;
+        return;
+    }
+    objGraficos.push_back(new Square(posx, posy, base, cor));
+
+}
+
+void Paint::addOval(int posx, int posy, int sRadius, int bRadius, COR cor) {
+    cout << "Paint: addOval" << endl;
+
+    if (posx < 0 || posy < 0 || sRadius <= 0 || bRadius <= 0) {
+        cerr << "As cordenadas devem ter valores de 0 para cima. Os raios devem ser maiores que 0." << endl;
+        return;
+    }
+    if (bRadius == sRadius) addCircle(posx, posy, sRadius, cor);
+    else objGraficos.push_back(new Oval(sRadius, bRadius, posx, posy, cor));
+
+}
+void Paint::addCircle(int posx, int posy, int Radius, COR cor) {
+    cout << "Paint: addCircle" << endl;
+    objGraficos.push_back(new Circle(Radius, posx, posy, cor));
+}
+
+
 void Paint::remove(int id){
 	cout << "Paint: remove (com id)" << endl;
 }
@@ -26,9 +64,17 @@ void Paint::move(int id, int dx, int dy){
 void Paint::resize(int id, int x2, int y2){
 	cout << "Paint: resize" << endl;
 }
-void Paint::draw(){
+string Paint::draw(){
 	cout << "Paint: draw" << endl;
-    // chamar toString dos objetos criados
+    stringstream ss;
+    ss << endl;
+    for (int i = 0; i < objGraficos.size(); i++) {
+        ss
+            << objGraficos[i]->toString()
+            << endl;
+    }
+    cout << ss.str();
+    return ss.str();
 }
 void Paint::read(string label) {
 	cout << "Paint: read" << endl;

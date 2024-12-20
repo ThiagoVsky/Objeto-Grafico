@@ -74,14 +74,15 @@ string ObjGrafico::toString(){
 	ss
 		<< "Type: "
 		<< getType()
-		<< "Color: "
+		<< " | Color: "
 		<< getColor()
-		<< "X1: "
+		<< " | X1: "
 		<< getX1()
-		<< "Y1: "
+		<< " | Y1: "
 		<< getY1()
-		<< "X2: "
+		<< " | X2: "
 		<< getX2()
-		<< "Y2: "
+		<< " | Y2: "
 		<< getY2();
+	return ss.str();
 }

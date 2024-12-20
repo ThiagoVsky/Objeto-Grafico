@@ -1,7 +1,15 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <fstream>
+#include <sstream>
+
 #include "ObjGrafico.h"
+#include "Rectangle.h"
+#include "Square.h"
+#include "Oval.h"
+#include "Circle.h"
+#include "Line.h"
 
 using namespace std;
 class Paint
@@ -15,14 +23,16 @@ class Paint
 public:
 	Paint();
 
-	void addObjGrafico(int type, int x1, int y1, int x2, int y2, COR cor = BRANCO);
+	void addObjGrafico(TYPE type, int x1, int y1, int x2, int y2, COR cor = PRETO); // Rectangle and Line
+	void addSquare(int posx, int posy, int base, COR cor = PRETO); // Square
+	void addOval(int posx, int posy, int sRadius, int bRadius, COR cor = PRETO); // Oval
+	void addCircle(int posx, int posy, int Radius, COR cor = PRETO); // Circle
 	void remove(int id); 
 	void remove();
 	void move(int id, int dx, int dy);
 	void resize(int id, int x2, int y2);
-	void draw();
+	string draw();
 	void read(string label); // string label é o nome do arquivo a ser lido ou gravado
 	void write(string label);
 
 };
-

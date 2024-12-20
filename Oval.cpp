@@ -16,14 +16,15 @@ string Oval::toString() {
 	ss
 		<< "Type: "
 		<< getType()
-		<< "Color: "
+		<< " | Color: "
 		<< getColor()
-		<< "Position (X, Y): "
+		<< " | Position (X, Y): "
 		<< getX1()
 		<< ", "
 		<< getY1()
-		<< "Bigger radius: "
+		<< " | Bigger radius: "
 		<< bRadius
-		<< "Smaller radius: "
+		<< " | Smaller radius: "
 		<< sRadius;
+	return ss.str();
 }

@@ -40,9 +40,8 @@ protected:
 	string getColor();
 public:
 	ObjGrafico(TYPE type, int x1, int y1, int x2, int y2, COR cor);
-
 	void move(int dx, int dy);
 	void resize(int x2, int y2);
-	virtual string toString() = 0;
+	virtual string toString();
 };
 
