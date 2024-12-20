@@ -1,3 +1,10 @@
+/******************************************************
+* #####	Autor: Thiago da Silva Moraes
+* #####	matrícula: 232035137
+* #####	Faculdade de Tecnologia
+* #####	Universidade de Brasília
+* #####	Classe Paint
+******************************************************/
 #include "Paint.h"
 
 
@@ -67,7 +74,7 @@ void Paint::resize(int id, int x2, int y2){
 string Paint::draw(){
 	cout << "Paint: draw" << endl;
     stringstream ss;
-    ss << endl;
+    cout << endl;
     for (int i = 0; i < objGraficos.size(); i++) {
         ss
             << objGraficos[i]->toString()
@@ -76,11 +83,29 @@ string Paint::draw(){
     cout << ss.str();
     return ss.str();
 }
-void Paint::read(string label) {
+void Paint::read(string label) { // não consegui implementar sistema para popular o vetor ObjGraficos
 	cout << "Paint: read" << endl;
+    ifstream file(label);
+    if(!file.is_open()) {
+        cerr << "Não foi possível abrir o arquivo";
+        return;
+    }
+
+    stringstream data;
+    data << file.rdbuf();
+    cout << data.str();
+    file.close();
+
 }
 void Paint::write(string label){
 	cout << "Paint: write" << endl;
+    ofstream file(label);
+    if (!file.is_open()) {
+        cerr << "Não foi possível criar o arquivo";
+        return;
+    }
+    file << draw();
+    file.close();
 }
 
 

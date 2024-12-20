@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
 #include <vector>
-#include <fstream>
 #include <sstream>
+#include <fstream>
 
 #include "ObjGrafico.h"
 #include "Rectangle.h"
@@ -36,3 +36,5 @@ public:
 	void write(string label);
 
 };
+
+

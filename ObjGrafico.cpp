@@ -1,3 +1,10 @@
+/******************************************************
+* #####	Autor: Thiago da Silva Moraes
+* #####	matrícula: 232035137
+* #####	Faculdade de Tecnologia
+* #####	Universidade de Brasília
+* #####	Classe ObjGrafico
+******************************************************/
 #include "ObjGrafico.h"
 
 

@@ -1,3 +1,10 @@
+/******************************************************
+* #####	Autor: Thiago da Silva Moraes
+* #####	matrícula: 232035137
+* #####	Faculdade de Tecnologia
+* #####	Universidade de Brasília
+* #####	Classe Circle
+******************************************************/
 #include "Circle.h"
 
 Circle::Circle(int posX, int posY, int radius, COR cor) : Oval(radius, radius, posX, posY, cor) {

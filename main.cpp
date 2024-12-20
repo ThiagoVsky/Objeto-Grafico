@@ -23,6 +23,11 @@ int main() {
 	paint.addOval(16, 12, 5, 13); // cria um oval
 	paint.addSquare(0, 0, 2); // cria um quadrado
 
-	paint.draw();
+	paint.write("teste.txt");
 
+	Paint readTest = Paint();
+	cout << endl;
+	readTest.read("teste.txt");
+
+	system("pause");
 }

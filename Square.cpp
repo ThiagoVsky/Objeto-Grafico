@@ -1,3 +1,10 @@
+/******************************************************
+* #####	Autor: Thiago da Silva Moraes
+* #####	matrícula: 232035137
+* #####	Faculdade de Tecnologia
+* #####	Universidade de Brasília
+* #####	Classe Square
+******************************************************/
 #include "Square.h"
 
 Square::Square(int x, int y, int base, COR cor) : Rectangle(x, y, (x + base), (y + base), cor) {

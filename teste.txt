@@ -1,0 +1,7 @@
+Type: RECTANGLE | Color: Preto | X1: 1 | Y1: 2 | X2: 8 | Y2: 15
+Type: LINE | Color: Verde | X1: 3 | Y1: 2 | X2: 5 | Y2: 7
+Type: SQUARE | Color: Azul | Position (X, Y): 3, 5 | Base: 5
+Type: CIRCLE | Color: Preto | Position (X, Y): 4, 5 | Radius: 8
+Type: CIRCLE | Color: Preto | Position (X, Y): 5, 9 | Radius: 9
+Type: OVAL | Color: Preto | Position (X, Y): 16, 12 | Bigger radius: 13 | Smaller radius: 5
+Type: SQUARE | Color: Preto | Position (X, Y): 0, 0 | Base: 2
