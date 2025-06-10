@@ -56,3 +56,5 @@
 > A entrega prevê um **Diagrama de Classes**.
 >
 > **A entrega será avaliada segundo o cumprimento de todas as _Especificações_ acima na data definida no ambiente Teams, com um código _main_ que demonstre a realização como solicitada**.
+
+Baseado no [[Original.md]]
